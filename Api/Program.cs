@@ -17,7 +17,7 @@ var host = new HostBuilder()
         });
 
         services.AddScoped<INppesApiService, NppesApiService>();
-        services.AddScoped<IPrescriberIntakeService, PrescriberIntakeService>();
+        services.AddScoped<INpiIngestionService, NpiIngestionService>();
 
         var connectionString = context.Configuration.GetConnectionString("SqlConnectionString");
         services.AddDbContext<NppesIntakeDbContext>((sp, options) =>

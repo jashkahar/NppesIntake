@@ -3,11 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NppesIntake.Core.Entities;
 
-public class MemberContactDetails
+public class MemberContactDetails : AuditableEntity
 {
-    [Key]
-    public int Id { get; set; }
-
     [Required]
     public int MemberId { get; set; }
 

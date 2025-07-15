@@ -3,11 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NppesIntake.Core.Entities;
 
-public class BusinessUnit
+public class BusinessUnit : AuditableEntity
 {
-    [Key]
-    public int BusinessUnitId { get; set; }
-
     public long? Npi { get; set; }
 
     [Required]

@@ -6,7 +6,7 @@ namespace NppesIntake.Core.Services;
 
 public interface INppesApiService
 {
-    Task<IEnumerable<NppesResultDto>> SearchByNpiAsync(string npiNumber);
-
-    Task<IEnumerable<NppesResultDto>> SearchByNameAsync(string firstName, string lastName);
+    // The service now returns our clean, simple object
+    Task<IEnumerable<NpiDataRecord>> SearchByNpiAsync(string npiNumber);
+    Task<IEnumerable<NpiDataRecord>> SearchByNameAsync(string firstName, string lastName);
 }

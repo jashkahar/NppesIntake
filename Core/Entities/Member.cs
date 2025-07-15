@@ -3,13 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NppesIntake.Core.Entities;
 
-public class Member
+public class Member : AuditableEntity
 {
-    [Key]
-    public int MemberId { get; set; }
 
-    [Required]
-    public long Npi { get; set; }
+    public long? Npi { get; set; }
 
     [Required]
     [MaxLength(100)]
